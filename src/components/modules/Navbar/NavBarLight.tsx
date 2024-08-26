@@ -1,15 +1,33 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import "./Navbar.css"
 
 const NavBarLight = () => {
   const [pathname, setPathName] = useState<string>("/");
+  const [fixTop , setFixTop] = useState(false)
   const location = useLocation();
   useEffect(() => {
     setPathName(location.pathname);
   }, []);
+
+  useEffect(() => {
+    const fixNavbarToTop = () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 105) {
+        setFixTop(true);
+      } else {
+        setFixTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", fixNavbarToTop);
+
+    return () => window.removeEventListener("scroll", fixNavbarToTop);
+  }, []);
+
   return (
-    <div className="container-fluid position-relative p-0">
-      <nav className="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+    <div className={`container-fluid position-relative p-0`}>
+      <nav className={`navbar navbar-expand-lg navbar-light  ${ fixTop ? " position-fixed bg-white navbar_animation " :"position-relative"} px-4 px-lg-5 py-3 py-lg-0 `}>
         <a href="" className="navbar-brand p-0">
           <h1 className="text-primary">
             <i className="fas fa-search-dollar me-3"></i>Stocker

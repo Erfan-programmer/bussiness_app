@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const TopBarLight = () => {
   return (
@@ -6,10 +7,10 @@ const TopBarLight = () => {
       <div className="row gx-0 align-items-center">
         <div className="col-lg-8 text-center text-lg-start mb-2 mb-lg-0">
           <div className="d-flex flex-wrap">
-            <a href="#" className="text-muted small me-4">
+            <Link to="/contact" className="text-muted small me-4">
               <i className="fas fa-map-marker-alt text-primary me-2"></i>Find A
               Location
-            </a>
+            </Link>
             <a href="tel:+01234567890" className="text-muted small me-4">
               <i className="fas fa-phone-alt text-primary me-2"></i>+01234567890
             </a>

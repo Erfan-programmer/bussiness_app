@@ -7,13 +7,19 @@ import NavBarLight from "../modules/Navbar/NavBarLight";
 import BlogPageBlog from "../templates/Blog/BlogPageBlog";
 import Footer from "../modules/Footer/Footer";
 import BackToTop from "../modules/BackToTop/BackToTop";
+import BreadCrumb from "../modules/BreadCrumb";
 
 const Blog = () => {
+  const link = {
+    title:"Contact Us",
+    route:"contact"
+  }
   return (
     <>
       <Spinner />
       <TopBarLight />
       <NavBarLight />
+      <BreadCrumb link={link}/>
       <BlogPageBlog />
       <Footer />
       <BackToTop />

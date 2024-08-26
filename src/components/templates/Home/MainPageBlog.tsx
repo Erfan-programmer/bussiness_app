@@ -1,5 +1,11 @@
 import React from "react";
+import { SwiperSlide, Swiper } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper/modules";
+import BlogBox from "../../modules/Home/BlogBox";
 const MainPageBlog = () => {
   return (
     <div className="container-fluid blog pb-5">
@@ -18,141 +24,47 @@ const MainPageBlog = () => {
             obcaecati, ipsam mollitia hic.
           </p>
         </div>
-        <div
-          className="owl-carousel blog-carousel wow fadeInUp"
-          data-wow-delay="0.2s"
-        >
-          <div className="blog-item p-4">
-            <div className="blog-img mb-4">
-              <img
-                src="img/service-1.jpg"
-                className="img-fluid w-100 rounded"
-                alt=""
-              />
-              <div className="blog-title">
-                <a href="#" className="btn">
-                  Dividend Stocks
-                </a>
-              </div>
-            </div>
-            <a href="#" className="h4 d-inline-block mb-3">
-              Options Trading Business?
-            </a>
-            <p className="mb-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              aut aliquam suscipit error corporis accusamus labore....
-            </p>
-            <div className="d-flex align-items-center">
-              <img
-                src="img/testimonial-1.jpg"
-                className="img-fluid rounded-circle"
-                style={{ width: "60px", height: "60px;" }}
-                alt=""
-              />
-              <div className="ms-3">
-                <h5>Admin</h5>
-                <p className="mb-0">October 9, 2025</p>
-              </div>
-            </div>
-          </div>
-          <div className="blog-item p-4">
-            <div className="blog-img mb-4">
-              <img
-                src="img/service-2.jpg"
-                className="img-fluid w-100 rounded"
-                alt=""
-              />
-              <div className="blog-title">
-                <a href="#" className="btn">
-                  Non-Dividend Stocks
-                </a>
-              </div>
-            </div>
-            <a href="#" className="h4 d-inline-block mb-3">
-              Options Trading Business?
-            </a>
-            <p className="mb-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              aut aliquam suscipit error corporis accusamus labore....
-            </p>
-            <div className="d-flex align-items-center">
-              <img
-                src="img/testimonial-2.jpg"
-                className="img-fluid rounded-circle"
-                style={{ width: "60px", height: "60px;" }}
-                alt=""
-              />
-              <div className="ms-3">
-                <h5>Admin</h5>
-                <p className="mb-0">October 9, 2025</p>
-              </div>
-            </div>
-          </div>
-          <div className="blog-item p-4">
-            <div className="blog-img mb-4">
-              <img
-                src="img/service-3.jpg"
-                className="img-fluid w-100 rounded"
-                alt=""
-              />
-              <div className="blog-title">
-                <a href="#" className="btn">
-                  Dividend Stocks
-                </a>
-              </div>
-            </div>
-            <a href="#" className="h4 d-inline-block mb-3">
-              Options Trading Business?
-            </a>
-            <p className="mb-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              aut aliquam suscipit error corporis accusamus labore....
-            </p>
-            <div className="d-flex align-items-center">
-              <img
-                src="img/testimonial-3.jpg"
-                className="img-fluid rounded-circle"
-                style={{ width: "60px", height: "60px;" }}
-                alt=""
-              />
-              <div className="ms-3">
-                <h5>Admin</h5>
-                <p className="mb-0">October 9, 2025</p>
-              </div>
-            </div>
-          </div>
-          <div className="blog-item p-4">
-            <div className="blog-img mb-4">
-              <img
-                src="img/service-4.jpg"
-                className="img-fluid w-100 rounded"
-                alt=""
-              />
-              <div className="blog-title">
-                <a href="#" className="btn">
-                  Non-Dividend Stocks
-                </a>
-              </div>
-            </div>
-            <a href="#" className="h4 d-inline-block mb-3">
-              Options Trading Business?
-            </a>
-            <p className="mb-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              aut aliquam suscipit error corporis accusamus labore....
-            </p>
-            <div className="d-flex align-items-center">
-              <img
-                src="img/testimonial-1.jpg"
-                className="img-fluid rounded-circle"
-                style={{ width: "60px", height: "60px;" }}
-                alt=""
-              />
-              <div className="ms-3">
-                <h5>Admin</h5>
-                <p className="mb-0">October 9, 2025</p>
-              </div>
-            </div>
+
+        <div className="container">
+          <div className="row gap-5 justify-content-center">
+            <BlogBox
+              title="Dividend Stocks"
+              question=" Options Trading Business?"
+              description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                aut aliquam suscipit error corporis accusamus labore...."
+              image="img/service-1.jpg"
+              role="Admin"
+              date="October 9, 2025"
+            />
+            <BlogBox
+              title="Non-Dividend Stocks"
+              question=" Options Trading Business?"
+              description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                aut aliquam suscipit error corporis accusamus labore......"
+              image="img/service-2.jpg"
+              role="Admin"
+              date="October 9, 2025"
+            />
+
+            <BlogBox
+              title="Dividend Stocks"
+              question=" Options Trading Business?"
+              description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                aut aliquam suscipit error corporis accusamus labore......"
+              image="img/service-3.jpg"
+              role="Admin"
+              date="October 9, 2025"
+            />
+
+            <BlogBox
+              title="Non-Dividend Stocks"
+              question=" Options Trading Business?"
+              description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
+                aut aliquam suscipit error corporis accusamus labore......"
+              image="img/service-4.jpg"
+              role="Admin"
+              date="October 9, 2025"
+            />
           </div>
         </div>
       </div>

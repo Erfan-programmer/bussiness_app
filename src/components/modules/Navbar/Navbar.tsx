@@ -1,22 +1,44 @@
 import React, { useEffect, useState } from "react";
 import { SwiperSlide, Swiper } from "swiper/react";
-
+import "./Navbar.css"
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import {NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [pathname, setPathName] = useState<string>("/");
+  const [fixTop, setFixTop] = useState(false);
+
   const location = useLocation();
   useEffect(() => {
     setPathName(location.pathname);
   }, []);
+
+  useEffect(() => {
+    const fixNavbarToTop = () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 105) {
+        setFixTop(true);
+      } else {
+        setFixTop(false);
+      }
+    };
+
+    window.addEventListener("scroll", fixNavbarToTop);
+
+    return () => window.removeEventListener("scroll", fixNavbarToTop);
+  }, []);
+
   return (
-    <div className="container-fluid position-relative p-0">
-      <nav className="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+    <div className={`container-fluid  position-relative p-0 `}>
+      <nav
+        className={`navbar  navbar-expand-lg ${
+          fixTop ? " position-fixed bg-white navbar_animation " : "position-relative"
+        } navbar-light px-4 px-lg-5 py-3 py-lg-0 `}
+      >
         <a href="" className="navbar-brand p-0">
           <h1 className="text-primary">
             <i className="fas fa-search-dollar me-3"></i>Stocker
@@ -32,7 +54,7 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <div className="navbar-nav ms-auto py-0">
-          <NavLink
+            <NavLink
               to="/"
               className={`nav-item nav-link ${"/" === pathname && "active"}`}
             >
@@ -46,14 +68,36 @@ const Navbar = () => {
             >
               About
             </NavLink>
-            <NavLink to="/service" className={` nav-item nav-link ${pathname === "/service" ? "active" : ""}`}>
+            <NavLink
+              to="/service"
+              className={` nav-item nav-link ${
+                pathname === "/service" ? "active" : ""
+              }`}
+            >
               Services
             </NavLink>
-            <NavLink to="/blog" className={`nav-item nav-link ${pathname === "/blogs" ? "active" : ""}`}>
+            <NavLink
+              to="/blog"
+              className={`nav-item nav-link ${
+                pathname === "/blogs" ? "active" : ""
+              }`}
+            >
               Blogs
             </NavLink>
             <div className="nav-item dropdown">
-              <NavLink to="/#" className={`nav-link ${pathname === "/feature" || pathname === "/team" || pathname === "testimonial" || pathname === "offer" || pathname === "faq" ? "active" : ""}`} data-bs-toggle="dropdown">
+              <NavLink
+                to="/#"
+                className={`nav-link ${
+                  pathname === "/feature" ||
+                  pathname === "/team" ||
+                  pathname === "testimonial" ||
+                  pathname === "offer" ||
+                  pathname === "faq"
+                    ? "active"
+                    : ""
+                }`}
+                data-bs-toggle="dropdown"
+              >
                 <span className="dropdown-toggle">Pages</span>
               </NavLink>
               <div className="dropdown-menu m-0">
@@ -77,7 +121,12 @@ const Navbar = () => {
                 </NavLink>
               </div>
             </div>
-            <NavLink to="/contact" className={`nav-item nav-link ${pathname === "/contact" ? "active" : ""}`}>
+            <NavLink
+              to="/contact"
+              className={`nav-item nav-link ${
+                pathname === "/contact" ? "active" : ""
+              }`}
+            >
               Contact Us
             </NavLink>
           </div>
@@ -89,8 +138,6 @@ const Navbar = () => {
           </a>
         </div>
       </nav>
-
-      <div className="header-carousel  owl-carousel"></div>
       <Swiper
         pagination={{
           type: "fraction",
@@ -102,14 +149,17 @@ const Navbar = () => {
       >
         <SwiperSlide>
           <div className="header-carousel-item h-100">
-          <div className="position-absolute bg-black top-0 right-0 left-0  w-100 h-100" style={{zIndex:1000 , background:"#000000b7"}}></div>
+            <div
+              className="position-absolute bg-black top-0 right-0 left-0  w-100 h-100"
+              style={{ zIndex: 1000, background: "#000000b7" }}
+            ></div>
 
             <img
               src="img/carousel-1.jpg"
               className="img-fluid w-100 h-100"
               alt="Image"
             />
-            <div className="carousel-caption"  style={{zIndex:1001}}>
+            <div className="carousel-caption" style={{ zIndex: 1001 }}>
               <div className="container">
                 <div className="row gy-0 gx-5">
                   <div className="col-lg-0 col-xl-5"></div>
@@ -179,13 +229,16 @@ const Navbar = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="header-carousel-item h-100 position-relative">
-            <div className="position-absolute bg-black top-0 right-0 left-0  w-100 h-100" style={{zIndex:1000 , background:"#000000b7"}}></div>
+            <div
+              className="position-absolute bg-black top-0 right-0 left-0  w-100 h-100"
+              style={{ zIndex: 1000, background: "#000000b7" }}
+            ></div>
             <img
               src="img/carousel-2.jpg"
               className="img-fluid w-100 h-100"
               alt="Image"
             />
-            <div className="carousel-caption bg-black" style={{zIndex:1001}}>
+            <div className="carousel-caption bg-black" style={{ zIndex: 1001 }}>
               <div className="container">
                 <div className="row g-5">
                   <div className="col-12 animated fadeInUp">

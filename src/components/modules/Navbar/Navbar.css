@@ -1,0 +1,14 @@
+.swiper-button-prev,
+.swiper-button-next {
+  top: 70%;
+  left: 5%;
+  background-color: var(--bs-primary);
+  width: 4rem;
+  color: #fff;
+  border-radius: 100%;
+  font-size: 0.7rem !important;
+  height: 4rem;
+}
+.swiper-button-next {
+  left: 10% !important;
+}

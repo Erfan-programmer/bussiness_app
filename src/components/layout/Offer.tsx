@@ -7,6 +7,10 @@ import Footer from "../modules/Footer/Footer";
 import BackToTop from "../modules/BackToTop/BackToTop";
 
 const Offer = () => {
+  const link = {
+    title:"Our Offer",
+    route:"offer"
+  }
   return (
     <>
       <Spinner />

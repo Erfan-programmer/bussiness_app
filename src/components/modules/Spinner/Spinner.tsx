@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 const Spinner = () => {
-  const [isLoadingFinish, setIsLoadingFinish] = useState<boolean>(true);
+  const [isLoadingFinish, setIsLoadingFinish] = useState<boolean>(false);
   useEffect(() => {
-    setTimeout(() => {
       setIsLoadingFinish(false);
-    }, 2000);
   }, []);
   return (
     <>
