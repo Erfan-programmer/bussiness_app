@@ -19,7 +19,7 @@ const ServicePageService = () => {
           </p>
         </div>
         <div className="row g-4">
-          <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+          <div className="col-md-6 col-lg-4 wow fadeInUp" data-aos="fade-up">
             <div className="service-item">
               <div className="service-img">
                 <img
@@ -44,7 +44,7 @@ const ServicePageService = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+          <div className="col-md-6 col-lg-4 wow fadeInUp" data-aos="fade-up">
             <div className="service-item">
               <div className="service-img">
                 <img
@@ -68,7 +68,7 @@ const ServicePageService = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+          <div className="col-md-6 col-lg-4 wow fadeInUp" data-aos="fade-up">
             <div className="service-item">
               <div className="service-img">
                 <img
@@ -92,7 +92,7 @@ const ServicePageService = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+          <div className="col-md-6 col-lg-4 wow fadeInUp" data-aos="fade-up">
             <div className="service-item">
               <div className="service-img">
                 <img
@@ -116,7 +116,7 @@ const ServicePageService = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
+          <div className="col-md-6 col-lg-4 wow fadeInUp" data-aos="fade-up">
             <div className="service-item">
               <div className="service-img">
                 <img
@@ -140,7 +140,7 @@ const ServicePageService = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
+          <div className="col-md-6 col-lg-4 wow fadeInUp" data-aos="fade-up">
             <div className="service-item">
               <div className="service-img">
                 <img

@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import "./Navbar.css"
 
 const NavBarLight = () => {
   const [pathname, setPathName] = useState<string>("/");
-  const [fixTop , setFixTop] = useState(false)
+  const [fixTop, setFixTop] = useState(false);
   const location = useLocation();
   useEffect(() => {
     setPathName(location.pathname);
@@ -27,7 +26,13 @@ const NavBarLight = () => {
 
   return (
     <div className={`container-fluid position-relative p-0`}>
-      <nav className={`navbar navbar-expand-lg navbar-light  ${ fixTop ? " position-fixed bg-white navbar_animation " :"position-relative"} px-4 px-lg-5 py-3 py-lg-0 `}>
+      <nav
+        className={`navbar  navbar-expand-lg ${
+          fixTop
+            ? " position-fixed bg-white navbar_animation "
+            : "position-relative"
+        } navbar-light px-4 px-lg-5 py-3 py-lg-0 `}
+      >
         <a href="" className="navbar-brand p-0">
           <h1 className="text-primary">
             <i className="fas fa-search-dollar me-3"></i>Stocker
@@ -41,7 +46,7 @@ const NavBarLight = () => {
         >
           <span className="fa fa-bars"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarCollapse" style={{display:"block"}}>
+        <div className="collapse navbar-collapse" id="navbarCollapse">
           <div className="navbar-nav ms-auto py-0">
             <NavLink
               to="/"
@@ -57,14 +62,36 @@ const NavBarLight = () => {
             >
               About
             </NavLink>
-            <NavLink to="/service" className={` nav-item nav-link ${pathname === "/service" ? "active" : ""}`}>
+            <NavLink
+              to="/service"
+              className={` nav-item nav-link ${
+                pathname === "/service" ? "active" : ""
+              }`}
+            >
               Services
             </NavLink>
-            <NavLink to="/blog" className={`nav-item nav-link ${pathname === "/blogs" ? "active" : ""}`}>
+            <NavLink
+              to="/blog"
+              className={`nav-item nav-link ${
+                pathname === "/blogs" ? "active" : ""
+              }`}
+            >
               Blogs
             </NavLink>
             <div className="nav-item dropdown">
-              <NavLink to="/#" className={`nav-link ${pathname === "/feature" || pathname === "/team" || pathname === "testimonial" || pathname === "offer" || pathname === "faq" ? "active" : ""}`} data-bs-toggle="dropdown">
+              <NavLink
+                to="/#"
+                className={`nav-link ${
+                  pathname === "/feature" ||
+                  pathname === "/team" ||
+                  pathname === "testimonial" ||
+                  pathname === "offer" ||
+                  pathname === "faq"
+                    ? "active"
+                    : ""
+                }`}
+                data-bs-toggle="dropdown"
+              >
                 <span className="dropdown-toggle">Pages</span>
               </NavLink>
               <div className="dropdown-menu m-0">
@@ -88,7 +115,12 @@ const NavBarLight = () => {
                 </NavLink>
               </div>
             </div>
-            <NavLink to="/contact" className={`nav-item nav-link ${pathname === "/contact" ? "active" : ""}`}>
+            <NavLink
+              to="/contact"
+              className={`nav-item nav-link ${
+                pathname === "/contact" ? "active" : ""
+              }`}
+            >
               Contact Us
             </NavLink>
           </div>

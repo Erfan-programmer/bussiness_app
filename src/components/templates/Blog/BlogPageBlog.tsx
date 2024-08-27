@@ -1,6 +1,10 @@
-import React from "react";
-
+import React, { useContext, useEffect, useState   } from "react";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import {ContextItem} from "./../../../../hooks/Context"
 const BlogPageBlog = () => {
+  const {BlogItems} = useContext(ContextItem)
+  console.log("blogITems =>" , BlogItems)
   return (
     <div className="container-fluid blog py-5">
       <div className="container py-5">
@@ -18,143 +22,64 @@ const BlogPageBlog = () => {
             obcaecati, ipsam mollitia hic.
           </p>
         </div>
-        <div
-          className="owl-carousel blog-carousel wow fadeInUp"
-          data-wow-delay="0.2s"
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={10}
+          pagination={{
+            type: "fraction",
+          }}
+          navigation={true}
+          loop
+          modules={[Navigation]}
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+          }}
+          className="mySwiper"
         >
-          <div className="blog-item p-4">
-            <div className="blog-img mb-4">
-              <img
-                src="img/service-1.jpg"
-                className="img-fluid w-100 rounded"
-                alt=""
-              />
-              <div className="blog-title">
-                <a href="#" className="btn">
-                  Dividend Stocks
+          {BlogItems?.map((blog) => (
+            <SwiperSlide key={blog?._id}>
+              <div className="blog-item p-4" data-aos="fade-up">
+                <div className="blog-img mb-4 h-25">
+                  <img
+                    src={blog.image}
+                    className="img-fluid w-100 h-100 rounded"
+                    alt={blog.title}
+                  />
+                  <div className="blog-title">
+                    <a href="#" className="btn">
+                      {blog.title}
+                    </a>
+                  </div>
+                </div>
+                <a href="#" className="h4 d-inline-block mb-3">
+                  {blog.question}
                 </a>
+                <p className="mb-4">{blog.description}</p>
+                {blog.testimonial && (
+                  <div className="d-flex align-items-center">
+                    <img
+                      src={blog.testimonial.image}
+                      className="img-fluid rounded-circle"
+                      style={{ width: "60px", height: "60px" }}
+                      alt={blog.testimonial.role}
+                    />
+                    <div className="ms-3">
+                      <h5>{blog.testimonial.role}</h5>
+                      <p className="mb-0">October 9, 2025</p>
+                    </div>
+                  </div>
+                )}
               </div>
-            </div>
-            <a href="#" className="h4 d-inline-block mb-3">
-              Options Trading Business?
-            </a>
-            <p className="mb-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              aut aliquam suscipit error corporis accusamus labore....
-            </p>
-            <div className="d-flex align-items-center">
-              <img
-                src="img/testimonial-1.jpg"
-                className="img-fluid rounded-circle"
-                style={{width: "60px" ,  height: "60px"}}
-                alt=""
-              />
-              <div className="ms-3">
-                <h5>Admin</h5>
-                <p className="mb-0">October 9, 2025</p>
-              </div>
-            </div>
-          </div>
-          <div className="blog-item p-4">
-            <div className="blog-img mb-4">
-              <img
-                src="img/service-2.jpg"
-                className="img-fluid w-100 rounded"
-                alt=""
-              />
-              <div className="blog-title">
-                <a href="#" className="btn">
-                  Non-Dividend Stocks
-                </a>
-              </div>
-            </div>
-            <a href="#" className="h4 d-inline-block mb-3">
-              Options Trading Business?
-            </a>
-            <p className="mb-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              aut aliquam suscipit error corporis accusamus labore....
-            </p>
-            <div className="d-flex align-items-center">
-              <img
-                src="img/testimonial-2.jpg"
-                className="img-fluid rounded-circle"
-                style={{width: "60px" ,  height: "60px"}}
-                alt=""
-              />
-              <div className="ms-3">
-                <h5>Admin</h5>
-                <p className="mb-0">October 9, 2025</p>
-              </div>
-            </div>
-          </div>
-          <div className="blog-item p-4">
-            <div className="blog-img mb-4">
-              <img
-                src="img/service-3.jpg"
-                className="img-fluid w-100 rounded"
-                alt=""
-              />
-              <div className="blog-title">
-                <a href="#" className="btn">
-                  Dividend Stocks
-                </a>
-              </div>
-            </div>
-            <a href="#" className="h4 d-inline-block mb-3">
-              Options Trading Business?
-            </a>
-            <p className="mb-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              aut aliquam suscipit error corporis accusamus labore....
-            </p>
-            <div className="d-flex align-items-center">
-              <img
-                src="img/testimonial-3.jpg"
-                className="img-fluid rounded-circle"
-                style={{width: "60px" ,  height: "60px"}}
-                alt=""
-              />
-              <div className="ms-3">
-                <h5>Admin</h5>
-                <p className="mb-0">October 9, 2025</p>
-              </div>
-            </div>
-          </div>
-          <div className="blog-item p-4">
-            <div className="blog-img mb-4">
-              <img
-                src="img/service-4.jpg"
-                className="img-fluid w-100 rounded"
-                alt=""
-              />
-              <div className="blog-title">
-                <a href="#" className="btn">
-                  Non-Dividend Stocks
-                </a>
-              </div>
-            </div>
-            <a href="#" className="h4 d-inline-block mb-3">
-              Options Trading Business?
-            </a>
-            <p className="mb-4">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-              aut aliquam suscipit error corporis accusamus labore....
-            </p>
-            <div className="d-flex align-items-center">
-              <img
-                src="img/testimonial-1.jpg"
-                className="img-fluid rounded-circle"
-                style={{width: "60px" ,  height: "60px"}}
-                alt=""
-              />
-              <div className="ms-3">
-                <h5>Admin</h5>
-                <p className="mb-0">October 9, 2025</p>
-              </div>
-            </div>
-          </div>
-        </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

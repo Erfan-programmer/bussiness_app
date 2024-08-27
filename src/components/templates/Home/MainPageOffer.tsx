@@ -11,7 +11,7 @@ const MainPageOffer = () => {
             </p>
         </div>
         <div className="row g-5 align-items-center">
-            <div className="col-xl-5 wow fadeInLeft" data-wow-delay="0.2s">
+            <div className="col-xl-5 wow fadeInLeft" data-aos="fade-up">
                 <div className="nav nav-pills bg-light rounded p-5">
                     <a className="accordion-link p-4 active mb-4" data-bs-toggle="pill" href="#collapseOne">
                         <h5 className="mb-0">Lending money for investment of your new projects</h5>
@@ -27,14 +27,14 @@ const MainPageOffer = () => {
                     </a>
                 </div>
             </div>
-            <div className="col-xl-7 wow fadeInRight" data-wow-delay="0.4s">
-                <div className="tab-content">
+            <div className="col-xl-7 wow fadeInRight"  data-aos="fade-up">
+                <div className="tab-content" >
                     <div id="collapseOne" className="tab-pane fade show p-0 active">
                         <div className="row g-4">
-                            <div className="col-md-7">
+                            <div className="col-md-7" >
                                 <img src="img/offer-1.jpg" className="img-fluid w-100 rounded" alt="" />
                             </div>
-                            <div className="col-md-5">
+                            <div className="col-md-5" >
                                 <h1 className="display-5 mb-4">The stock market provides a venue...</h1>
                                 <p className="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis amet sequi molestiae tenetur eum mollitia, blanditiis, magnam illo magni error dolore unde perspiciatis tempore et totam corrupti dignissimos aut praesentium?
                                 </p>

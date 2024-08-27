@@ -10,6 +10,7 @@ const TeamBox = ({image , name , role}:TeamType) => {
     <div
     className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
     data-wow-delay="0.8s"
+    data-aos="fade-up"
   >
     <div className="team-item">
       <div className="team-img">

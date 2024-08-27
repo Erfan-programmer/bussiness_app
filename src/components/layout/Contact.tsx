@@ -6,6 +6,7 @@ import ContactPageContact from "../templates/Contact/ContactPageContact";
 import Footer from "../modules/Footer/Footer";
 import BackToTop from "../modules/BackToTop/BackToTop";
 import BreadCrumb from "../modules/BreadCrumb";
+import Navbar from "../modules/Navbar/Navbar";
 
 const Contact = () => {
   const link = {

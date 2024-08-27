@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import TestimonialBox from "../../modules/Home/TestimonialBox";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import "./MainPageTestimonial.css"
+import "./MainPageTestimonial.css";
+import { ContextItem } from "../../../../hooks/Context";
+import { TestimonialType } from "../../../../types/blog";
 const MainPageTestimonial = () => {
+  const { TestimonialItems } = useContext(ContextItem);
   return (
     <div className="container-fluid testimonial pb-5">
       <div className="container pb-5">
@@ -22,6 +25,7 @@ const MainPageTestimonial = () => {
           </p>
         </div>
         <Swiper
+          data-aos="fade-up"
           slidesPerView={1}
           spaceBetween={10}
           navigation={true}
@@ -34,51 +38,21 @@ const MainPageTestimonial = () => {
             768: {
               slidesPerView: 3,
               spaceBetween: 40,
-            }
+            },
           }}
           modules={[Navigation, Pagination]}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <TestimonialBox
-              image="img/testimonial-2.jpg"
-              comment={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-              blanditiis excepturi quisquam temporibus voluptatum
-              reprehenderit culpa, quasi corrupti laborum accusamus.`}
-              name="Sajad Rahimi"
-              role="Professor"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TestimonialBox
-              image="img/testimonial-1.jpg"
-              comment={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-              blanditiis excepturi quisquam temporibus voluptatum
-              reprehenderit culpa, quasi corrupti laborum accusamus.`}
-              name="Marin Danesi Far"
-              role="Professor"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TestimonialBox
-              image="img/testimonial-3.jpg"
-              comment={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-              blanditiis excepturi quisquam temporibus voluptatum
-              reprehenderit culpa, quasi corrupti laborum accusamus.`}
-              name="Mason Grinwood"
-              role="Writer"
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <TestimonialBox
-              image="img/testimonial-1.jpg"
-              comment={`Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-              blanditiis excepturi quisquam temporibus voluptatum
-              reprehenderit culpa, quasi corrupti laborum accusamus.`}
-              name="Nazo Biani"
-              role="Professor"
-            />
-          </SwiperSlide>
+          {TestimonialItems?.map((testimonial: TestimonialType) => (
+            <SwiperSlide>
+              <TestimonialBox
+                image={testimonial?.image}
+                comment={testimonial?.description}
+                name={testimonial?.name}
+                role={testimonial?.role}
+              />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </div>

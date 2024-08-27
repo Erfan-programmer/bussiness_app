@@ -11,7 +11,7 @@ const AboutPageAbout = () => {
                 <p className="mb-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum velit temporibus repudiandae ipsa, eaque perspiciatis cumque incidunt tenetur sequi reiciendis.
                 </p>
                 <div className="row g-4">
-                    <div className="col-md-6 col-lg-6 col-xl-6">
+                    <div className="col-md-6 col-lg-6 col-xl-6" data-aos="fade-up">
                         <div className="d-flex">
                             <div><i className="fas fa-lightbulb fa-3x text-primary"></i></div>
                             <div className="ms-4">
@@ -20,7 +20,7 @@ const AboutPageAbout = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-6 col-lg-6 col-xl-6">
+                    <div className="col-md-6 col-lg-6 col-xl-6" data-aos="fade-up">
                         <div className="d-flex">
                             <div><i className="bi bi-bookmark-heart-fill fa-3x text-primary"></i></div>
                             <div className="ms-4">
@@ -29,10 +29,10 @@ const AboutPageAbout = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-sm-6">
+                    <div className="col-sm-6" data-aos="fade-up">
                         <a href="#" className="btn btn-primary rounded-pill py-3 px-5 flex-shrink-0">Discover Now</a>
                     </div>
-                    <div className="col-sm-6">
+                    <div className="col-sm-6" data-aos="fade-up">
                         <div className="d-flex">
                             <i className="fas fa-phone-alt fa-2x text-primary me-4"></i>
                             <div>
@@ -44,7 +44,7 @@ const AboutPageAbout = () => {
                 </div>
             </div>
         </div>
-        <div className="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
+        <div className="col-xl-5 wow fadeInRight" data-aos="fade-up">
             <div className="bg-primary rounded position-relative overflow-hidden">
                 <img src="img/about-2.png" className="img-fluid rounded w-100" alt="" />
                 

@@ -23,7 +23,7 @@ const FeaturePageFeature = () => {
         <div className="row g-4">
           <div
             className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.2s"
+            data-aos="fade-up"
           >
             <div className="feature-item p-4">
               <div className="feature-icon p-4 mb-4">
@@ -42,6 +42,7 @@ const FeaturePageFeature = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
             data-wow-delay="0.4s"
+            data-aos="fade-up"
           >
             <div className="feature-item p-4">
               <div className="feature-icon p-4 mb-4">
@@ -60,6 +61,7 @@ const FeaturePageFeature = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
             data-wow-delay="0.6s"
+            data-aos="fade-up"
           >
             <div className="feature-item p-4">
               <div className="feature-icon p-4 mb-4">
@@ -78,6 +80,7 @@ const FeaturePageFeature = () => {
           <div
             className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
             data-wow-delay="0.8s"
+            data-aos="fade-up"
           >
             <div className="feature-item p-4">
               <div className="feature-icon p-4 mb-4">

@@ -19,7 +19,7 @@ const FAQPageFAQ = () => {
           </p>
         </div>
         <div className="row g-5 align-items-center">
-          <div className="col-lg-6 wow fadeInLeft" data-wow-delay="0.2s">
+          <div className="col-lg-6 wow fadeInLeft" data-aos="fade-up">
             <div
               className="accordion accordion-flush bg-light rounded p-5"
               id="accordionFlushSection"
@@ -190,7 +190,7 @@ const FAQPageFAQ = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6 wow fadeInRight" data-wow-delay="0.2s">
+          <div className="col-lg-6 wow fadeInRight" data-aos="fade-up">
             <div className="bg-primary rounded">
               <img src="img/about-2.png" className="img-fluid w-100" alt="" />
             </div>

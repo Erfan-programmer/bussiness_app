@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ContextItem } from "../../../../hooks/Context";
+import { FeatureType } from "../../../../types/blog";
 
 const AboutPageFeatures = () => {
+  const {featuresItems} = useContext(ContextItem)
   return (
     <div className="container feature pb-5">
       <div className="container-fluid pb-5">
@@ -21,78 +24,26 @@ const AboutPageFeatures = () => {
           </p>
         </div>
         <div className="row g-4">
+        {featuresItems?.map((feature:FeatureType)=>
           <div
             className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
             data-wow-delay="0.2s"
+            data-aos="fade-up"
           >
             <div className="feature-item p-4">
               <div className="feature-icon p-4 mb-4">
-                <i className="fas fa-chart-line fa-4x text-primary"></i>
+                <i className={` ${feature?.icon} fa-4x text-primary `}></i>
               </div>
-              <h4>Global Management</h4>
+              <h4>{feature?.title}</h4>
               <p className="mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic
-                laborum odit pariatur...
+                {feature?.description}
               </p>
               <a className="btn btn-primary rounded-pill py-2 px-4" href="#">
                 Learn More
               </a>
             </div>
           </div>
-          <div
-            className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.4s"
-          >
-            <div className="feature-item p-4">
-              <div className="feature-icon p-4 mb-4">
-                <i className="fas fa-university fa-4x text-primary"></i>
-              </div>
-              <h4>Corporate Banking</h4>
-              <p className="mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic
-                laborum odit pariatur...
-              </p>
-              <a className="btn btn-primary rounded-pill py-2 px-4" href="#">
-                Learn More
-              </a>
-            </div>
-          </div>
-          <div
-            className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.6s"
-          >
-            <div className="feature-item p-4">
-              <div className="feature-icon p-4 mb-4">
-                <i className="fas fa-file-alt fa-4x text-primary"></i>
-              </div>
-              <h4>Asset Management</h4>
-              <p className="mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic
-                laborum odit pariatur...
-              </p>
-              <a className="btn btn-primary rounded-pill py-2 px-4" href="#">
-                Learn More
-              </a>
-            </div>
-          </div>
-          <div
-            className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-            data-wow-delay="0.8s"
-          >
-            <div className="feature-item p-4">
-              <div className="feature-icon p-4 mb-4">
-                <i className="fas fa-hand-holding-usd fa-4x text-primary"></i>
-              </div>
-              <h4>Investment Bank</h4>
-              <p className="mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic
-                laborum odit pariatur...
-              </p>
-              <a className="btn btn-primary rounded-pill py-2 px-4" href="#">
-                Learn More
-              </a>
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </div>

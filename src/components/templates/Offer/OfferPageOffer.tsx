@@ -59,7 +59,7 @@ const OfferPageOffer = () => {
               </a>
             </div>
           </div>
-          <div className="col-xl-7 wow fadeInRight" data-wow-delay="0.4s">
+          <div className="col-xl-7 wow fadeInRight" data-aos="fade-up">
             <div className="tab-content">
               <div id="collapseOne" className="tab-pane fade show p-0 active">
                 <div className="row g-4">

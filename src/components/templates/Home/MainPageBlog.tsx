@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { SwiperSlide, Swiper } from "swiper/react";
 
 // Import Swiper styles
@@ -6,7 +6,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import BlogBox from "../../modules/Home/BlogBox";
+import { ContextItem } from "../../../../hooks/Context";
+import { BlogType } from "../../../../types/blog";
 const MainPageBlog = () => {
+  const {BlogItems} = useContext(ContextItem) 
   return (
     <div className="container-fluid blog pb-5">
       <div className="container pb-5">
@@ -26,45 +29,12 @@ const MainPageBlog = () => {
         </div>
 
         <div className="container">
-          <div className="row gap-5 justify-content-center">
-            <BlogBox
-              title="Dividend Stocks"
-              question=" Options Trading Business?"
-              description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                aut aliquam suscipit error corporis accusamus labore...."
-              image="img/service-1.jpg"
-              role="Admin"
-              date="October 9, 2025"
-            />
-            <BlogBox
-              title="Non-Dividend Stocks"
-              question=" Options Trading Business?"
-              description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                aut aliquam suscipit error corporis accusamus labore......"
-              image="img/service-2.jpg"
-              role="Admin"
-              date="October 9, 2025"
-            />
-
-            <BlogBox
-              title="Dividend Stocks"
-              question=" Options Trading Business?"
-              description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                aut aliquam suscipit error corporis accusamus labore......"
-              image="img/service-3.jpg"
-              role="Admin"
-              date="October 9, 2025"
-            />
-
-            <BlogBox
-              title="Non-Dividend Stocks"
-              question=" Options Trading Business?"
-              description="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore
-                aut aliquam suscipit error corporis accusamus labore......"
-              image="img/service-4.jpg"
-              role="Admin"
-              date="October 9, 2025"
-            />
+          <div className="row gap-5 justify-content-center" data-aos="fade-up">
+            {BlogItems?.map((blog:BlogType)=>(
+              <BlogBox key={blog._id}
+              {...blog}
+              />
+            ))}
           </div>
         </div>
       </div>

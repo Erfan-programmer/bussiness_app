@@ -9,7 +9,7 @@ const FeatureBox = ({title , description , icon}:FeatureType) => {
   return (
     <div
       className="col-md-6 col-lg-6 col-xl-3 wow fadeInUp"
-      data-wow-delay="0.8s"
+      data-aos="fade-right"
     >
       <div className="feature-item p-4">
         <div className="feature-icon p-4 mb-4">

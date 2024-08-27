@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import TeamBox from "../../modules/Home/TeamBox";
+import { ContextItem } from "../../../../hooks/Context";
+import { TeamType } from "../../../../types/blog";
 
 const MainPageTeam = () => {
+  const { TeamItems } = useContext(ContextItem);
   return (
     <div className="container-fluid team pb-5">
       <div className="container pb-5">
@@ -20,10 +23,9 @@ const MainPageTeam = () => {
           </p>
         </div>
         <div className="row g-4">
-          <TeamBox name="David James" role="Profession" image="img/team-1.jpg" />
-          <TeamBox name="David Jones" role="Profession" image="img/team-2.jpg" />
-          <TeamBox name="Namino James" role="student" image="img/team-4.jpg" />
-          <TeamBox name="Erfan Kazemi" role="student" image="img/team-3.jpg" />
+          {TeamItems?.map((team: TeamType) => (
+            <TeamBox key={team?._id} {...team} />
+          ))}
         </div>
       </div>
     </div>

@@ -1,11 +1,13 @@
 import React from "react";
+import ContactForms from "../../modules/Contact/ContactForms";
 
 const ContactPageContact = () => {
+
   return (
     <div className="container-fluid contact py-5">
       <div className="container py-5">
         <div className="row g-5">
-          <div className="col-xl-6">
+          <div className="col-xl-6" data-aos="fade-up">
             <div className="wow fadeInUp" data-wow-delay="0.2s">
               <div className="bg-light rounded p-5 mb-5">
                 <h4 className="text-primary mb-4">Get in Touch</h4>
@@ -73,85 +75,12 @@ const ContactPageContact = () => {
                   </a>
                   .
                 </p>
-                <form>
-                  <div className="row g-4">
-                    <div className="col-lg-12 col-xl-6">
-                      <div className="form-floating">
-                        <input
-                          type="text"
-                          className="form-control border-0"
-                          id="name"
-                          placeholder="Your Name"
-                        />
-                        <label htmlFor="name">Your Name</label>
-                      </div>
-                    </div>
-                    <div className="col-lg-12 col-xl-6">
-                      <div className="form-floating">
-                        <input
-                          type="email"
-                          className="form-control border-0"
-                          id="email"
-                          placeholder="Your Email"
-                        />
-                        <label htmlFor="email">Your Email</label>
-                      </div>
-                    </div>
-                    <div className="col-lg-12 col-xl-6">
-                      <div className="form-floating">
-                        <input
-                          type="phone"
-                          className="form-control border-0"
-                          id="phone"
-                          placeholder="Phone"
-                        />
-                        <label htmlFor="phone">Your Phone</label>
-                      </div>
-                    </div>
-                    <div className="col-lg-12 col-xl-6">
-                      <div className="form-floating">
-                        <input
-                          type="text"
-                          className="form-control border-0"
-                          id="project"
-                          placeholder="Project"
-                        />
-                        <label htmlFor="project">Your Project</label>
-                      </div>
-                    </div>
-                    <div className="col-12">
-                      <div className="form-floating">
-                        <input
-                          type="text"
-                          className="form-control border-0"
-                          id="subject"
-                          placeholder="Subject"
-                        />
-                        <label htmlFor="subject">Subject</label>
-                      </div>
-                    </div>
-                    <div className="col-12">
-                      <div className="form-floating">
-                        <textarea
-                          className="form-control border-0"
-                          placeholder="Leave a message here"
-                          id="message"
-                          style={{ height: "160px" }}
-                        ></textarea>
-                        <label htmlFor="message">Message</label>
-                      </div>
-                    </div>
-                    <div className="col-12">
-                      <button className="btn btn-primary w-100 py-3">
-                        Send Message
-                      </button>
-                    </div>
-                  </div>
-                </form>
+                <ContactForms />
+
               </div>
             </div>
           </div>
-          <div className="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+          <div className="col-xl-6 wow fadeInRight" data-aos="fade-up">
             <div className="rounded h-100">
               <iframe
                 className="rounded h-100 w-100"

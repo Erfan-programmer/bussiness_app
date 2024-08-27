@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { SwiperSlide, Swiper } from "swiper/react";
-import "./Navbar.css"
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";

@@ -20,9 +20,8 @@ const ServicePageTestimonial = () => {
         </div>
         <div
           className="owl-carousel testimonial-carousel wow fadeInUp"
-          data-wow-delay="0.2s"
         >
-          <div className="testimonial-item">
+          <div className="testimonial-item" data-aos="fade-up">
             <div className="testimonial-quote-left">
               <i className="fas fa-quote-left fa-2x"></i>
             </div>
@@ -57,7 +56,7 @@ const ServicePageTestimonial = () => {
               <i className="fas fa-quote-right fa-2x"></i>
             </div>
           </div>
-          <div className="testimonial-item">
+          <div className="testimonial-item" data-aos="fade-up">
             <div className="testimonial-quote-left">
               <i className="fas fa-quote-left fa-2x"></i>
             </div>
@@ -92,7 +91,7 @@ const ServicePageTestimonial = () => {
               <i className="fas fa-quote-right fa-2x"></i>
             </div>
           </div>
-          <div className="testimonial-item">
+          <div className="testimonial-item" data-aos="fade-up">
             <div className="testimonial-quote-left">
               <i className="fas fa-quote-left fa-2x"></i>
             </div>
@@ -127,7 +126,7 @@ const ServicePageTestimonial = () => {
               <i className="fas fa-quote-right fa-2x"></i>
             </div>
           </div>
-          <div className="testimonial-item">
+          <div className="testimonial-item" data-aos="fade-up">
             <div className="testimonial-quote-left">
               <i className="fas fa-quote-left fa-2x"></i>
             </div>

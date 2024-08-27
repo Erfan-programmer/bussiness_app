@@ -11,8 +11,8 @@ import BreadCrumb from "../modules/BreadCrumb";
 
 const Blog = () => {
   const link = {
-    title:"Contact Us",
-    route:"contact"
+    title:"Our Blog",
+    route:"blog"
   }
   return (
     <>

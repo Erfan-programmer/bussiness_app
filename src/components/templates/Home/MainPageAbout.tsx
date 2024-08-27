@@ -5,7 +5,7 @@ const MainPageAbout = () => {
     <div className="container-fluid about py-5">
         <div className="container py-5">
             <div className="row g-5 align-items-center">
-                <div className="col-xl-7 wow fadeInLeft" data-wow-delay="0.2s">
+                <div className="col-xl-7 wow fadeInLeft" data-aos="fade-up">
                     <div>
                         <h4 className="text-primary">About Us</h4>
                         <h1 className="display-5 mb-4">Meet our company unless miss the opportunity</h1>
@@ -45,7 +45,7 @@ const MainPageAbout = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-xl-5 wow fadeInRight" data-wow-delay="0.2s">
+                <div className="col-xl-5 wow fadeInRight" data-aos="fade-up">
                     <div className="bg-primary rounded position-relative overflow-hidden">
                         <img src="img/about-2.png" className="img-fluid rounded w-100" alt="" />
                         
