@@ -9,9 +9,7 @@ import MainPageBlog from "../templates/Home/MainPageBlog";
 import MainPageFaq from "../templates/Home/MainPageFaq";
 import MainPageTeam from "../templates/Home/MainPageTeam";
 import MainPageTestimonial from "../templates/Home/MainPageTestimonial";
-import Footer from "../modules/Footer/Footer";
 import MainPageFeature from "../templates/Home/MainPageFeature";
-import BackToTop from "../modules/BackToTop/BackToTop";
 
 const Home = () => {
   return (
@@ -27,8 +25,6 @@ const Home = () => {
       <MainPageFaq />
       <MainPageTeam />
       <MainPageTestimonial />
-      <Footer />
-      <BackToTop />
     </>
   );
 };
