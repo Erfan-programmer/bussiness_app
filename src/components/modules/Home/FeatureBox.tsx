@@ -1,4 +1,4 @@
-import React from "react";
+ 
 
 type FeatureType = {
     title:string,

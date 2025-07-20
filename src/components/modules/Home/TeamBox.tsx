@@ -1,5 +1,3 @@
-import React from 'react'
-
 type TeamType = {
     image:string,
     name:string,

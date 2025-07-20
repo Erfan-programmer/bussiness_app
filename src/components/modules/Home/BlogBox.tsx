@@ -1,14 +1,9 @@
-import React from "react";
-import { SwiperSlide } from "swiper/react";
-
 import { BlogType } from "../../../../types/blog";
-
 const BlogBox = ({
   title,
   question,
   description,
   image,
-  role,
   date,
   testimonial,
 }: BlogType) => {

@@ -1,4 +1,4 @@
-import React from "react";
+ 
 import ServiceBox from "../../modules/Home/serviceBox";
 
 const MainPageService = () => {

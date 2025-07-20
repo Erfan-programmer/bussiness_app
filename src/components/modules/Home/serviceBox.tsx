@@ -1,4 +1,4 @@
-import React from "react";
+ 
 
 type ServiceType = {
   title: string;

@@ -1,5 +1,3 @@
-import React from 'react'
-
 const MainPageFaq = () => {
   return (
     <div className="container-fluid faq-section pb-5">

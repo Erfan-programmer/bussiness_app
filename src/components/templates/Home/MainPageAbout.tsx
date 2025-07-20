@@ -1,5 +1,3 @@
-import React from 'react'
-
 const MainPageAbout = () => {
   return (
     <div className="container-fluid about py-5">

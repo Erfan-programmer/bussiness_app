@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
+    "@types/aos": "^3.0.7",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
@@ -40,5 +41,18 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erfan-programmer/bussiness_app.git"
+  },
+  "keywords": [],
+  "author": "Erfan Kazemi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Erfan-programmer/bussiness_app/issues"
+  },
+  "homepage": "https://github.com/Erfan-programmer/bussiness_app#readme"
 }

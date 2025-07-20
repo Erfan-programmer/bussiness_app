@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import RoutesContainer from "./routes";
 import Footer from "./components/modules/Footer/Footer";

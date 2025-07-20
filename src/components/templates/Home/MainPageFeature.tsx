@@ -1,4 +1,4 @@
-import React from "react";
+ 
 import FeatureBox from "../../modules/Home/FeatureBox";
 
 const MainPageFeature = () => {

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState   } from "react";
+import  { useContext   } from "react";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {ContextItem} from "./../../../../hooks/Context"

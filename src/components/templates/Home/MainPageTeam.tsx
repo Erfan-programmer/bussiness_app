@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import  { useContext } from "react";
 import TeamBox from "../../modules/Home/TeamBox";
 import { ContextItem } from "../../../../hooks/Context";
 import { TeamType } from "../../../../types/blog";

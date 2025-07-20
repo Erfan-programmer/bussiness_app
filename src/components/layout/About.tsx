@@ -1,4 +1,4 @@
-import React from "react";
+ 
 import Spinner from "../modules/Spinner/Spinner";
 import AboutPageAbout from "../templates/About/AboutPageAbout";
 import AboutPageFeatures from "../templates/About/AboutPageFeatures";

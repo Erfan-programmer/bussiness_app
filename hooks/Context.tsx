@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from "react";
+import  { createContext, useEffect, useState } from "react";
 import { BlogType , FeatureType , TeamType , TestimonialType} from "./../types/blog";
 interface ItemsType {
   BlogItems: BlogType[];

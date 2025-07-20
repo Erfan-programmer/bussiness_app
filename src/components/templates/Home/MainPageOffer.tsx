@@ -1,5 +1,3 @@
-import React from 'react'
-
 const MainPageOffer = () => {
   return (
     <div className="container-fluid offer-section pb-5">

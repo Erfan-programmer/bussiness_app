@@ -1,10 +1,6 @@
-import React, { useContext } from "react";
-import { SwiperSlide, Swiper } from "swiper/react";
-
-// Import Swiper styles
+import  { useContext } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
 import BlogBox from "../../modules/Home/BlogBox";
 import { ContextItem } from "../../../../hooks/Context";
 import { BlogType } from "../../../../types/blog";

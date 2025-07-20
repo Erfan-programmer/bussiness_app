@@ -1,4 +1,4 @@
-import React from "react";
+ 
 const Footer = () => {
   return (
     <>
@@ -159,20 +159,7 @@ const Footer = () => {
               </span>
             </div>
             <div className="col-md-6 text-center text-md-end text-body">
-              Designed By{" "}
-              <a
-                className="border-bottom text-white"
-                href="https://htmlcodex.com"
-              >
-                HTML Codex
-              </a>{" "}
-              Distributed By{" "}
-              <a
-                className="border-bottom text-white"
-                href="https://themewagon.com"
-              >
-                ThemeWagon
-              </a>
+              Designed By Erfan Kazemi
             </div>
           </div>
         </div>
